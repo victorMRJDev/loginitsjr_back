@@ -1,6 +1,6 @@
 
 const express = require('express');
-const {  db } = require('../database/config');
+const {  db } = require('./database/config');
 require('dotenv').config();
 const cors = require('cors');
 const serverless = require("serverless-http");
@@ -31,8 +31,8 @@ app.use(express.static('public'));
 app.use(express.json());
 
 //Rutas
-app.use('/.netlify/functions/index', require('../routes/auth'));
-// app.use('/.netlify/functions/app/api/auth', require('../routes/auth'));
+// app.use('/.netlify/functions/index', require('./routes/auth'));
+app.use('/api/auth', require('./routes/auth'));
 
 
 
