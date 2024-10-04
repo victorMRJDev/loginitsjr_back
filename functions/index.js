@@ -31,7 +31,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 //Rutas
-app.use('/.netlify/functions/app', require('../routes/auth'));
+app.use('/.netlify/functions/index', require('../routes/auth'));
 // app.use('/.netlify/functions/app/api/auth', require('../routes/auth'));
 
 
